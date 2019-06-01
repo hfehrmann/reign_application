@@ -14,6 +14,9 @@
 		0CE75FD022A317F20099B277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE75FCE22A317F20099B277 /* LaunchScreen.storyboard */; };
 		0CE75FDB22A317F30099B277 /* ReignTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE75FDA22A317F30099B277 /* ReignTests.swift */; };
 		0CE75FE622A317F30099B277 /* ReignUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE75FE522A317F30099B277 /* ReignUITests.swift */; };
+		3A157B63E91A7A18D50996A0 /* Pods_ReignUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 876F968B59B49D73B1359464 /* Pods_ReignUITests.framework */; };
+		73CBB79C9D0EDCC996B47418 /* Pods_ReignTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484DC31561C414820F6FBB1E /* Pods_ReignTests.framework */; };
+		99689EEECCACFA85EF8F96FC /* Pods_Reign.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C208CE0517375C023D730D63 /* Pods_Reign.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,15 @@
 		0CE75FE122A317F30099B277 /* ReignUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReignUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CE75FE522A317F30099B277 /* ReignUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReignUITests.swift; sourceTree = "<group>"; };
 		0CE75FE722A317F30099B277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2549A4F690FE757B7A211B5F /* Pods-Reign.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reign.debug.xcconfig"; path = "Target Support Files/Pods-Reign/Pods-Reign.debug.xcconfig"; sourceTree = "<group>"; };
+		484DC31561C414820F6FBB1E /* Pods_ReignTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReignTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F413D334A2C8303EA423438 /* Pods-ReignUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReignUITests.debug.xcconfig"; path = "Target Support Files/Pods-ReignUITests/Pods-ReignUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		876F968B59B49D73B1359464 /* Pods_ReignUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReignUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C208CE0517375C023D730D63 /* Pods_Reign.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reign.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6BFB92BB032B375A439C70B /* Pods-Reign.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reign.release.xcconfig"; path = "Target Support Files/Pods-Reign/Pods-Reign.release.xcconfig"; sourceTree = "<group>"; };
+		DAE2E35FF21F7C60C7E8EFCC /* Pods-ReignTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReignTests.release.xcconfig"; path = "Target Support Files/Pods-ReignTests/Pods-ReignTests.release.xcconfig"; sourceTree = "<group>"; };
+		E8F4DB5545B0F04989D05B04 /* Pods-ReignTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReignTests.debug.xcconfig"; path = "Target Support Files/Pods-ReignTests/Pods-ReignTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F1317C8303315E29BC771A0B /* Pods-ReignUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReignUITests.release.xcconfig"; path = "Target Support Files/Pods-ReignUITests/Pods-ReignUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99689EEECCACFA85EF8F96FC /* Pods_Reign.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73CBB79C9D0EDCC996B47418 /* Pods_ReignTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A157B63E91A7A18D50996A0 /* Pods_ReignUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				0CE75FD922A317F30099B277 /* ReignTests */,
 				0CE75FE422A317F30099B277 /* ReignUITests */,
 				0CE75FC322A317EF0099B277 /* Products */,
+				E90C0D80401CC5ED6D2EF258 /* Pods */,
+				3DCF31FC7CBA07227C52FAAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +142,29 @@
 			path = ReignUITests;
 			sourceTree = "<group>";
 		};
+		3DCF31FC7CBA07227C52FAAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C208CE0517375C023D730D63 /* Pods_Reign.framework */,
+				484DC31561C414820F6FBB1E /* Pods_ReignTests.framework */,
+				876F968B59B49D73B1359464 /* Pods_ReignUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E90C0D80401CC5ED6D2EF258 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2549A4F690FE757B7A211B5F /* Pods-Reign.debug.xcconfig */,
+				D6BFB92BB032B375A439C70B /* Pods-Reign.release.xcconfig */,
+				E8F4DB5545B0F04989D05B04 /* Pods-ReignTests.debug.xcconfig */,
+				DAE2E35FF21F7C60C7E8EFCC /* Pods-ReignTests.release.xcconfig */,
+				6F413D334A2C8303EA423438 /* Pods-ReignUITests.debug.xcconfig */,
+				F1317C8303315E29BC771A0B /* Pods-ReignUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CE75FEA22A317F30099B277 /* Build configuration list for PBXNativeTarget "Reign" */;
 			buildPhases = (
+				D66666547AE8D4ECD4C72078 /* [CP] Check Pods Manifest.lock */,
 				0CE75FBE22A317EF0099B277 /* Sources */,
 				0CE75FBF22A317EF0099B277 /* Frameworks */,
 				0CE75FC022A317EF0099B277 /* Resources */,
+				055DBB60454968AF9575135F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +191,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CE75FED22A317F30099B277 /* Build configuration list for PBXNativeTarget "ReignTests" */;
 			buildPhases = (
+				8AD4291DCBA22CEA1C9421A8 /* [CP] Check Pods Manifest.lock */,
 				0CE75FD222A317F20099B277 /* Sources */,
 				0CE75FD322A317F20099B277 /* Frameworks */,
 				0CE75FD422A317F20099B277 /* Resources */,
@@ -167,6 +210,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CE75FF022A317F30099B277 /* Build configuration list for PBXNativeTarget "ReignUITests" */;
 			buildPhases = (
+				721D78D7FA7C9BEEDA7E3DE6 /* [CP] Check Pods Manifest.lock */,
 				0CE75FDD22A317F30099B277 /* Sources */,
 				0CE75FDE22A317F30099B277 /* Frameworks */,
 				0CE75FDF22A317F30099B277 /* Resources */,
@@ -250,6 +294,101 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		055DBB60454968AF9575135F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Reign/Pods-Reign-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Reign/Pods-Reign-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		721D78D7FA7C9BEEDA7E3DE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReignUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AD4291DCBA22CEA1C9421A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReignTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D66666547AE8D4ECD4C72078 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Reign-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0CE75FBE22A317EF0099B277 /* Sources */ = {
@@ -430,6 +569,7 @@
 		};
 		0CE75FEB22A317F30099B277 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2549A4F690FE757B7A211B5F /* Pods-Reign.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +588,7 @@
 		};
 		0CE75FEC22A317F30099B277 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6BFB92BB032B375A439C70B /* Pods-Reign.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +607,7 @@
 		};
 		0CE75FEE22A317F30099B277 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8F4DB5545B0F04989D05B04 /* Pods-ReignTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +629,7 @@
 		};
 		0CE75FEF22A317F30099B277 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAE2E35FF21F7C60C7E8EFCC /* Pods-ReignTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +651,7 @@
 		};
 		0CE75FF122A317F30099B277 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F413D334A2C8303EA423438 /* Pods-ReignUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +672,7 @@
 		};
 		0CE75FF222A317F30099B277 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1317C8303315E29BC771A0B /* Pods-ReignUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
