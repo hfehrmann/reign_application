@@ -26,7 +26,7 @@ class MainCoordinator: Coordinator {
             appDependencies: appDependecies
         )
         articleCoordinator.start()
-        
+
         window.rootViewController = navigation
         window.makeKeyAndVisible()
     }

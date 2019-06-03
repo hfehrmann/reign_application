@@ -12,7 +12,6 @@ enum ArticleManagerError: Error {
     case unableToFetchArticles(Error)
 }
 
-
 protocol ArticleManager {
     func getLatestArticles(
         onSuccess: (([Article]) -> Void)?,
