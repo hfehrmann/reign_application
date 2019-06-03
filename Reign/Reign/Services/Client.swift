@@ -21,7 +21,7 @@ protocol Client {
     )
 }
 
-func movieClientDefault() -> Client {
+func clientDefault() -> Client {
     return ClientImpl(apiClient: apiClientDefault())
 }
 
