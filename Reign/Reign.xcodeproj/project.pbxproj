@@ -20,6 +20,10 @@
 		0CE7600B22A4A1E90099B277 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7600822A4A1E90099B277 /* Client.swift */; };
 		0CE7600C22A4A1E90099B277 /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7600922A4A1E90099B277 /* Persistance.swift */; };
 		0CF16A4F22A5D4B900D12E0F /* ArticleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF16A4C22A5D4B900D12E0F /* ArticleManager.swift */; };
+		0CF16A5522A5D64100D12E0F /* Coordinators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF16A5122A5D64100D12E0F /* Coordinators.swift */; };
+		0CF16A5622A5D64100D12E0F /* ArticleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF16A5222A5D64100D12E0F /* ArticleCoordinator.swift */; };
+		0CF16A5722A5D64100D12E0F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF16A5322A5D64100D12E0F /* MainCoordinator.swift */; };
+		0CF16A5B22A5D68D00D12E0F /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF16A5A22A5D68D00D12E0F /* AppDependencies.swift */; };
 		3A157B63E91A7A18D50996A0 /* Pods_ReignUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 876F968B59B49D73B1359464 /* Pods_ReignUITests.framework */; };
 		73CBB79C9D0EDCC996B47418 /* Pods_ReignTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484DC31561C414820F6FBB1E /* Pods_ReignTests.framework */; };
 		99689EEECCACFA85EF8F96FC /* Pods_Reign.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C208CE0517375C023D730D63 /* Pods_Reign.framework */; };
@@ -62,6 +66,10 @@
 		0CE7600822A4A1E90099B277 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		0CE7600922A4A1E90099B277 /* Persistance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
 		0CF16A4C22A5D4B900D12E0F /* ArticleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleManager.swift; sourceTree = "<group>"; };
+		0CF16A5122A5D64100D12E0F /* Coordinators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinators.swift; sourceTree = "<group>"; };
+		0CF16A5222A5D64100D12E0F /* ArticleCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCoordinator.swift; sourceTree = "<group>"; };
+		0CF16A5322A5D64100D12E0F /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		0CF16A5A22A5D68D00D12E0F /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		2549A4F690FE757B7A211B5F /* Pods-Reign.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reign.debug.xcconfig"; path = "Target Support Files/Pods-Reign/Pods-Reign.debug.xcconfig"; sourceTree = "<group>"; };
 		484DC31561C414820F6FBB1E /* Pods_ReignTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReignTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F413D334A2C8303EA423438 /* Pods-ReignUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReignUITests.debug.xcconfig"; path = "Target Support Files/Pods-ReignUITests/Pods-ReignUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,9 +134,11 @@
 		0CE75FC422A317EF0099B277 /* Reign */ = {
 			isa = PBXGroup;
 			children = (
+				0CF16A5922A5D67500D12E0F /* Application */,
 				0CE75FFC22A31A5E0099B277 /* Models */,
 				0CE7600622A4A1E90099B277 /* Services */,
 				0CF16A4922A5D4B900D12E0F /* Managers */,
+				0CF16A5022A5D64100D12E0F /* Coordinators */,
 				0CE75FC522A317EF0099B277 /* AppDelegate.swift */,
 				0CE75FC722A317EF0099B277 /* ViewController.swift */,
 				0CE75FC922A317EF0099B277 /* Main.storyboard */,
@@ -190,6 +200,24 @@
 				0CF16A4C22A5D4B900D12E0F /* ArticleManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		0CF16A5022A5D64100D12E0F /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				0CF16A5122A5D64100D12E0F /* Coordinators.swift */,
+				0CF16A5322A5D64100D12E0F /* MainCoordinator.swift */,
+				0CF16A5222A5D64100D12E0F /* ArticleCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		0CF16A5922A5D67500D12E0F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				0CF16A5A22A5D68D00D12E0F /* AppDependencies.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 		3DCF31FC7CBA07227C52FAAC /* Frameworks */ = {
@@ -446,13 +474,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CE7600C22A4A1E90099B277 /* Persistance.swift in Sources */,
+				0CF16A5622A5D64100D12E0F /* ArticleCoordinator.swift in Sources */,
 				0CE75FC822A317EF0099B277 /* ViewController.swift in Sources */,
 				0CE7600B22A4A1E90099B277 /* Client.swift in Sources */,
 				0CE75FC622A317EF0099B277 /* AppDelegate.swift in Sources */,
+				0CF16A5722A5D64100D12E0F /* MainCoordinator.swift in Sources */,
 				0CE7600522A31A5E0099B277 /* ArticlesApiRepsonse.swift in Sources */,
+				0CF16A5B22A5D68D00D12E0F /* AppDependencies.swift in Sources */,
 				0CE7600322A31A5E0099B277 /* Article.swift in Sources */,
 				0CF16A4F22A5D4B900D12E0F /* ArticleManager.swift in Sources */,
 				0CE7600A22A4A1E90099B277 /* ApiClient.swift in Sources */,
+				0CF16A5522A5D64100D12E0F /* Coordinators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
