@@ -9,6 +9,5 @@
 import Foundation
 
 struct ArticlesApiRepsonse: Codable {
-
     let hints: [Article]
 }
