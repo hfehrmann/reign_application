@@ -27,6 +27,7 @@ class ListArticlesViewController: UIViewController {
 
     override func viewDidLoad() {
         navigationController?.setNavigationBarHidden(true, animated: false)
+
         tableView.register(ListArticlesTableCellImpl.self, forCellReuseIdentifier: cellIdentifier)
         tableView.rowHeight = 70
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
@@ -35,11 +36,13 @@ class ListArticlesViewController: UIViewController {
         let footerView = UIView()
         footerView.frame = CGRect(x: 0, y: 0, width: 0, height: view.safeAreaInsets.bottom)
         tableView.tableFooterView = footerView
+        tableView.backgroundView = PullDownToRefreshMessage()
         tableView.backgroundColor = .white
         tableView.dataSource = self
         tableView.delegate = self
 
         let refreshControl = UIRefreshControl()
+        refreshControl.backgroundColor = .lightGray
         refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
         tableView.refreshControl = refreshControl
 
@@ -63,6 +66,7 @@ private extension ListArticlesViewController {
 
     @objc func refreshData() {
         viewModel.refresh()
+        tableView.backgroundView = nil
     }
 }
 
