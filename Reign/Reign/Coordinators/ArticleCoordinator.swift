@@ -19,5 +19,18 @@ class ArticleCoordinator: Coordinator {
         self.appDependencies = appDependencies
     }
 
-    func start() { }
+    func start() {
+        let controller = ListArticlesWireframe.viewController(
+            withDelegate: self,
+            appDependencies: appDependencies
+        )
+        navigationController.viewControllers = [controller]
+    }
+}
+
+extension ArticleCoordinator: ListArticlesViewDelegate {
+
+    func favoriteMovieView(_ viewController: ListArticlesViewController, didSelect movie: Article) {
+
+    }
 }

@@ -11,6 +11,7 @@ import Foundation
 struct Article: Codable {
 
     private enum CodingKeys: String, CodingKey {
+        case objectId = "objectID"
         case title
         case storyTitle = "story_title"
         case author
@@ -18,9 +19,17 @@ struct Article: Codable {
         case storyUrl = "story_url"
     }
 
+    let objectId: String
     let title: String?
     let storyTitle: String?
     let author: String
-    let createdAt: String
+    let createdAt: Date
     let storyUrl: String?
+}
+
+extension Article: Equatable {
+
+    static func == (lhs: Article, rhs: Article) -> Bool {
+        return lhs.objectId == rhs.objectId
+    }
 }

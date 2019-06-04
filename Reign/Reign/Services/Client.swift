@@ -62,7 +62,7 @@ extension ClientImpl: Client {
     ) {
         if let data = data {
             do {
-                let movies = try JSONDecoder().decode(type, from: data)
+                let movies = try DateableJSONDecoder().decode(type, from: data)
                 onSuccess?(movies)
             } catch DecodingError.dataCorrupted(let context) {
                 onError?(.decoded(description: context.debugDescription))
@@ -71,6 +71,29 @@ extension ClientImpl: Client {
             }
         } else if let error = error {
             onError?(.apiError(error: error))
+        }
+    }
+}
+
+private class DateableJSONDecoder: JSONDecoder {
+
+    let formatter: ISO8601DateFormatter
+
+    override init() {
+        formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withFractionalSeconds, .withInternetDateTime]
+        super.init()
+        dateDecodingStrategy = .custom { [unowned self] decoder in
+            let container = try decoder.singleValueContainer()
+            let dateString = try container.decode(String.self)
+            if let date = self.formatter.date(from: dateString) {
+                return date
+            } else {
+                throw DecodingError.dataCorruptedError(
+                    in: container,
+                    debugDescription: "Date value is not in a valid iso8601 format"
+                )
+            }
         }
     }
 }

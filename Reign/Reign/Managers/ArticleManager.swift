@@ -17,6 +17,7 @@ protocol ArticleManager {
         onSuccess: (([Article]) -> Void)?,
         onError: ((ArticleManagerError) -> Void)?
     )
+    func remove(article: Article, callback: (([Article]) -> Void)?)
 }
 
 func articleManagerDefault() -> ArticleManager {
@@ -43,12 +44,26 @@ extension ArticleManagerImpl: ArticleManager {
         onError: ((ArticleManagerError) -> Void)?
     ) {
         client.articlesSearch(
-            onSuccess: { articleResponse in
-                onSuccess?(articleResponse.hints)
+            onSuccess: { [weak self] articleResponse in
+                guard let self = self else { return }
+                let articles = articleResponse.hits
+                try? self.persitance.save(data: articles, forKey: Constant.PersistanceKey.articles)
+                onSuccess?(articles)
             },
-            onError: { errorData in
-                onError?(.unableToFetchArticles(errorData))
+            onError: { [weak self] errorData in
+                print(errorData)
+                guard let self = self else { return }
+                let key = Constant.PersistanceKey.articles
+                let articles: [Article]? = try? self.persitance.retreive(key: key)
+                onSuccess?(articles ?? [])
             }
         )
+    }
+
+    func remove(article: Article, callback: (([Article]) -> Void)?) {
+        var articles: [Article]
+        articles = (try? persitance.retreive(key: Constant.PersistanceKey.articles)) ?? []
+        articles.removeAll { $0.objectId == article.objectId }
+        callback?(articles)
     }
 }
