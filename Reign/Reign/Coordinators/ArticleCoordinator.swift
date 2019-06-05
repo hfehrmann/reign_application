@@ -30,7 +30,11 @@ class ArticleCoordinator: Coordinator {
 
 extension ArticleCoordinator: ListArticlesViewDelegate {
 
-    func favoriteMovieView(_ viewController: ListArticlesViewController, didSelect movie: Article) {
-
+    func favoriteMovieView(
+        _ viewController: ListArticlesViewController,
+        didSelect article: Article
+    ) {
+        let controller = ShowArticleWireframe.viewController(article: article)
+        navigationController.pushViewController(controller, animated: true)
     }
 }

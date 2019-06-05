@@ -11,6 +11,6 @@ import Foundation
 enum Constant {
 
     enum PersistanceKey {
-        static var articles: String { return "articles_key" }
+        static var articles: String { return "articles_key" }
     }
 }
