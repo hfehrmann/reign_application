@@ -10,13 +10,18 @@ import Foundation
 
 enum ArticleManagerError: Error {
     case unableToFetchArticles(Error)
+    case unableToRetreiveArticles(Error)
 }
 
 protocol ArticleManager {
     func load()
-    func getLatestArticles(
+    func getLocalArticles(
         onSuccess: (([Article]) -> Void)?,
         onError: ((ArticleManagerError) -> Void)?
+    )
+    func getLatestArticles(
+        onSuccess: (([Article]) -> Void)?,
+        onError: (([Article], ArticleManagerError) -> Void)?
     )
     func remove(article: Article, callback: (([Article]) -> Void)?)
 }
@@ -49,9 +54,23 @@ extension ArticleManagerImpl: ArticleManager {
         self.deletedKeys = deletedKeys ?? []
     }
 
-    func getLatestArticles(
+    func getLocalArticles(
         onSuccess: (([Article]) -> Void)?,
         onError: ((ArticleManagerError) -> Void)?
+    ) {
+        do {
+            let key = Constant.PersistanceKey.articles
+            let articles: [Article]? = try self.persitance.retreive(key: key)
+            let finalArticles = self.filterArticles(articles ?? [], self.deletedKeys)
+            onSuccess?(finalArticles)
+        } catch {
+            onError?(.unableToRetreiveArticles(error))
+        }
+    }
+
+    func getLatestArticles(
+        onSuccess: (([Article]) -> Void)?,
+        onError: (([Article], ArticleManagerError) -> Void)?
     ) {
         client.articlesSearch(
             onSuccess: { [weak self] articleResponse in
@@ -64,9 +83,13 @@ extension ArticleManagerImpl: ArticleManager {
                 print(errorData)
                 guard let self = self else { return }
                 let key = Constant.PersistanceKey.articles
-                let articles: [Article]? = try? self.persitance.retreive(key: key)
-                let finalArticles = self.filterArticles(articles ?? [], self.deletedKeys)
-                onSuccess?(finalArticles)
+                do {
+                    let articles: [Article]? = try self.persitance.retreive(key: key)
+                    let finalArticles = self.filterArticles(articles ?? [], self.deletedKeys)
+                    onError?(finalArticles, .unableToFetchArticles(errorData))
+                } catch {
+                    onError?([], .unableToRetreiveArticles(error))
+                }
             }
         )
     }

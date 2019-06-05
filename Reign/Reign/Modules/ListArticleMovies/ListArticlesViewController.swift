@@ -53,6 +53,7 @@ class ListArticlesViewController: UIViewController {
             self.tableView.reloadData()
             refreshControl.endRefreshing()
         }
+        viewModel.load()
     }
 
     override func viewWillAppear(_ animated: Bool) {

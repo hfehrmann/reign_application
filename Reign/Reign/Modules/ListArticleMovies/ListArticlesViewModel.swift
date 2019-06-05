@@ -14,6 +14,7 @@ protocol ListArticlesViewModel {
 
     var title: String { get }
     var count: Int { get }
+    func load()
     func refresh()
     func remove(at indexPath: IndexPath)
     func select(indexPath: IndexPath)
@@ -38,8 +39,20 @@ class ListArticlesViewModelImpl {
 }
 
 extension ListArticlesViewModelImpl: ListArticlesViewModel {
+
     var title: String { return "Favorites" }
     var count: Int { return articles.count }
+
+    func load() {
+        articlesManager.getLocalArticles(
+            onSuccess: { [weak self] articles in
+                guard articles.count > 0 else { return }
+                self?.articles = articles
+                self?.onUpdate()
+            },
+            onError: nil
+        )
+    }
 
     func refresh() {
         articlesManager.getLatestArticles(
@@ -47,7 +60,10 @@ extension ListArticlesViewModelImpl: ListArticlesViewModel {
                 self?.articles = articles
                 self?.onUpdate()
             },
-            onError: nil
+            onError: { [weak self] articles, _ in
+                self?.articles = articles
+                self?.onUpdate()
+            }
         )
     }
 
