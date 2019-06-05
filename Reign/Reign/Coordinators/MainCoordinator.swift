@@ -38,6 +38,7 @@ private  extension MainCoordinator {
         let dependencies = AppDependencies(
             articleManager: articleManagerDefault()
         )
+        dependencies.articleManager.load()
         return dependencies
     }
 }
