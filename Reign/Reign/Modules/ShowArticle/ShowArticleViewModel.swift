@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ShowArticleViewModel {
-
+    var articleURL: URL? { get }
 }
 
 // Implementation
@@ -25,4 +25,8 @@ class ShowArticleViewModelImpl {
 
 extension ShowArticleViewModelImpl: ShowArticleViewModel {
 
+    var articleURL: URL? {
+        guard let urlString = article.storyUrl else { return nil }
+        return URL(string: urlString)
+    }
 }

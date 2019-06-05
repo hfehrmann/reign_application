@@ -13,8 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowArticleViewController">
             <connections>
                 <outlet property="errorView" destination="nMz-tc-Eeg" id="ecd-RI-IGL"/>
+                <outlet property="loader" destination="z0r-EM-jqF" id="e7L-HY-Niw"/>
                 <outlet property="view" destination="iN0-l3-epB" id="gQ2-lc-bY0"/>
-                <outlet property="webView" destination="j4B-Bk-6NR" id="oB1-PQ-rbz"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -22,14 +22,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j4B-Bk-6NR">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <wkWebViewConfiguration key="configuration">
-                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                        <wkPreferences key="preferences"/>
-                    </wkWebViewConfiguration>
-                </wkWebView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nMz-tc-Eeg">
                     <rect key="frame" x="10" y="395" width="394" height="116.5"/>
                     <subviews>
@@ -58,16 +50,18 @@
                         <constraint firstItem="d77-OV-DfQ" firstAttribute="centerX" secondItem="nMz-tc-Eeg" secondAttribute="centerX" id="p2C-sA-ioG"/>
                     </constraints>
                 </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="z0r-EM-jqF">
+                    <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                    <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="j4B-Bk-6NR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7uk-lK-BRn"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nMz-tc-Eeg" secondAttribute="trailing" constant="10" id="897-nr-4Vj"/>
-                <constraint firstItem="nMz-tc-Eeg" firstAttribute="centerY" secondItem="j4B-Bk-6NR" secondAttribute="centerY" id="g4O-bB-0Fu"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="j4B-Bk-6NR" secondAttribute="trailing" id="iU9-bX-aHG"/>
-                <constraint firstItem="j4B-Bk-6NR" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="mLc-5J-NAB"/>
+                <constraint firstItem="z0r-EM-jqF" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="SZM-3M-bRp"/>
+                <constraint firstItem="nMz-tc-Eeg" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="cW8-F3-w0U"/>
                 <constraint firstItem="nMz-tc-Eeg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="oao-1P-ywr"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="j4B-Bk-6NR" secondAttribute="bottom" id="vGf-au-bkf"/>
+                <constraint firstItem="z0r-EM-jqF" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="pnK-GQ-SJk"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>

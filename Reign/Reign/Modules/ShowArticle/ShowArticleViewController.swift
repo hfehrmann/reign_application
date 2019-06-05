@@ -12,8 +12,10 @@ import WebKit
 
 class ShowArticleViewController: UIViewController {
 
-    @IBOutlet private weak var webView: WKWebView!
     @IBOutlet private weak var errorView: UIView!
+    @IBOutlet private weak var loader: UIActivityIndicatorView!
+
+    private var webView: WKWebView!
 
     private var viewModel: ShowArticleViewModel
 
@@ -27,9 +29,28 @@ class ShowArticleViewController: UIViewController {
     }
 
     override func viewDidLoad() {
+        loader.hidesWhenStopped = true
+        loader.stopAnimating()
+        guard let url = viewModel.articleURL else { return }
+        loader.startAnimating()
+        errorView.removeFromSuperview()
+
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: view.bounds, configuration: webConfiguration)
+        webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        webView.load(URLRequest(url: url))
+        webView.navigationDelegate = self
+        view.insertSubview(webView, belowSubview: loader)
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: true  )
+    }
+}
 
+extension ShowArticleViewController: WKNavigationDelegate {
+
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        loader.stopAnimating()
     }
 }

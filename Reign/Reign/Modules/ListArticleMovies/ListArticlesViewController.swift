@@ -26,8 +26,6 @@ class ListArticlesViewController: UIViewController {
     }
 
     override func viewDidLoad() {
-        navigationController?.setNavigationBarHidden(true, animated: false)
-
         tableView.register(ListArticlesTableCellImpl.self, forCellReuseIdentifier: cellIdentifier)
         tableView.rowHeight = 70
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
@@ -59,6 +57,7 @@ class ListArticlesViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
 }
 
