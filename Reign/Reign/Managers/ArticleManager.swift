@@ -96,8 +96,10 @@ extension ArticleManagerImpl: ArticleManager {
 
     func remove(article: Article, callback: (([Article]) -> Void)?) {
         var articles: [Article]
+        let articlesKey = Constant.PersistanceKey.articles
         articles = (try? persitance.retreive(key: Constant.PersistanceKey.articles)) ?? []
         articles.removeAll { $0.objectId == article.objectId }
+        try? persitance.save(data: articles, forKey: articlesKey)
 
         // Here we can enque this task over a serial queue to avoid data races
         let key = Constant.PersistanceKey.deletedArticlesKeys
