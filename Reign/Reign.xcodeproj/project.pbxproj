@@ -140,12 +140,13 @@
 		0C166E5E22A6252700440243 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				0C166E5F22A6254C00440243 /* FavoriteMovies */,
+				0C94711722A7FFD400D7BAF1 /* ShowArticle */,
+				0C166E5F22A6254C00440243 /* ListArticleMovies */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		0C166E5F22A6254C00440243 /* FavoriteMovies */ = {
+		0C166E5F22A6254C00440243 /* ListArticleMovies */ = {
 			isa = PBXGroup;
 			children = (
 				0C166E6122A6254C00440243 /* TableCell */,
@@ -154,7 +155,7 @@
 				0C166E6022A6254C00440243 /* ListArticlesViewModel.swift */,
 				0C166E6522A6254C00440243 /* ListArticlesWireframe.swift */,
 			);
-			path = FavoriteMovies;
+			path = ListArticleMovies;
 			sourceTree = "<group>";
 		};
 		0C166E6122A6254C00440243 /* TableCell */ = {
@@ -164,6 +165,13 @@
 				0C166E6222A6254C00440243 /* ListArticlesCellViewModel.swift */,
 			);
 			path = TableCell;
+			sourceTree = "<group>";
+		};
+		0C94711722A7FFD400D7BAF1 /* ShowArticle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ShowArticle;
 			sourceTree = "<group>";
 		};
 		0CE75FB922A317EF0099B277 = {
